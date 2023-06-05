@@ -3,7 +3,7 @@ import people from './data';
 import {FaChevronCircleLeft, FaChevronCircleRight, FaQuoteRight} from 'react-icons/fa'
 
 const App = () => {
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(1)
   const {name, job, image, text} = people[index]
   // console.log(name);
   return <main>
@@ -15,9 +15,12 @@ const App = () => {
                 className='person-img'
                 />
                 <span>
-                  
+                  <FaQuoteRight />
                 </span>
               </div>
+              <h4 className='author'>{name}</h4>
+              <p className='job'>{job}</p>
+              <p className='info'>{text}</p>
             </article>
          </main>
   
